@@ -9,9 +9,10 @@ function handleOnLoad() {
   const slide1 = document.getElementsByClassName('slide-one')[0];
   const slide2 = document.getElementsByClassName('slide-two')[0];
   const slide3 = document.getElementsByClassName('slide-three')[0];
+  const slide4 = document.getElementsByClassName('slide-four')[0];
 
-  const slides = [slide1, slide2, slide3];
-  const areSlidesScrolled = [0,0,0];
+  const slides = [slide1, slide2, slide3, slide4];
+  const areSlidesScrolled = [0,0,0,0];
   document.onscroll = (event) => handleScroll(event, slides, areSlidesScrolled);
 }
 
@@ -22,22 +23,29 @@ function handleScroll(e, slides, areSlidesScrolled){
     for all the unnecessary scrolls?! 
   */
 
-  let scrolledHeight = window.pageYOffset/2;
+  let scrolledHeight = window.pageYOffset;
   const parts = slides.length;
 
-  if(scrolledHeight <= HEIGHT/parts) {
-    console.log("CHECK");
+  console.log(scrolledHeight);
+
+  if(scrolledHeight <= HEIGHT) {
+    console.log("CHECK 1");
     changeBackground(slides, areSlidesScrolled, 0);
   }
 
-  if(scrolledHeight > HEIGHT/parts){
-    console.log("CHECK");
+  if(scrolledHeight > HEIGHT-120){
+    console.log("CHECK 2");
     changeBackground(slides, areSlidesScrolled, 1);
   }
 
-  if(scrolledHeight > 2*HEIGHT/parts){
-    console.log("CHECK");
+  if(scrolledHeight > 2*HEIGHT-120){
+    console.log("CHECK 3");
     changeBackground(slides, areSlidesScrolled, 2);
+  }
+
+  if(scrolledHeight > 3*HEIGHT-120){
+    console.log("CHECK 4");
+    changeBackground(slides, areSlidesScrolled, 3);
   }
 }
 

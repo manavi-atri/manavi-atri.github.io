@@ -36,11 +36,6 @@ a {
     text-decoration: none;
 }
 
-.outer-slide {
-    height: 100%;
-    width: 100%;
-}
-
 .slide {
     display: flex;
     flex-direction: column;
@@ -49,9 +44,77 @@ a {
     height: 100%;
     width: 100%;
     transition: background 1s ease;
+    padding: 20px;
 }
 
+@media only screen and (max-width: 600px) {
+    .slide {
+        height: auto;
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+}
 
 .contact-sources {
-    display: block;
+    display: flex;
 }
+
+.slide1-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide1-image img {
+    height: 240px;
+    width: 240px;
+    border-radius: 100%;
+    border: 3px solid #fff;
+}
+
+.slide-two p {
+    font-size: 21px;
+}
+
+.slide3-zero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide3-one {
+    display: flex;
+}
+
+.slide3-two {
+    display: flex;
+}
+
+.slide3-one div {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.slide3-two div {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+ion-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide3-text {
+    font-size: 21px;
+}
+
+.slide4-pushpak-link {
+    color: #000
+}
+
+.slide4-ashwani-link {
+    color: #000
+}
+
