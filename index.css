@@ -47,14 +47,6 @@ a {
     padding: 20px;
 }
 
-@media only screen and (max-width: 600px) {
-    .slide {
-        height: auto;
-        margin-top: 120px;
-        margin-bottom: 120px;
-    }
-}
-
 .contact-sources {
     display: flex;
 }
@@ -80,14 +72,19 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
 }
 
 .slide3-one {
     display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
 .slide3-two {
     display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
 .slide3-one div {
@@ -118,3 +115,20 @@ ion-icon {
     color: #000
 }
 
+@media only screen and (max-width: 600px) {
+    .slide {
+        height: auto;
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }
+
+    .slide3-one div {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+    
+    .slide3-two div {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+}
